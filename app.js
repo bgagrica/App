@@ -40,10 +40,10 @@ app.get('/register', (req, res) => {
      res.sendFile('login.html', { root: './static' });
  });
 
-//  app.get('/', (req, res) => {
+ app.get('/', (req, res) => {
 
-//     res.sendFile('login.html', { root: './static' });
-// });
+    res.sendFile('index.html', { root: './dist' });
+});
 
 
 app.post('/',authToken, (req, res) => {
