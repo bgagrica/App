@@ -33,17 +33,17 @@ function authToken(req, res, next) {
 
 
 app.get('/register', (req, res) => {
-    res.sendFile('register.html', { root: './service_APP/static' });
+    res.sendFile('register.html', { root: './static' });
 });
 
  app.get('/login', (req, res) => {
-     res.sendFile('login.html', { root: './service_APP/static' });
+     res.sendFile('login.html', { root: './static' });
  });
 
- app.get('/', (req, res) => {
+//  app.get('/', (req, res) => {
 
-    res.sendFile('login.html', { root: './service_APP/static' });
-});
+//     res.sendFile('login.html', { root: './static' });
+// });
 
 
 app.post('/',authToken, (req, res) => {
@@ -52,7 +52,7 @@ app.post('/',authToken, (req, res) => {
 
 app.get('/moderator', (req, res) => {
 
-    res.sendFile('indexModerator.html', { root: './service_APP/static' });
+    res.sendFile('indexModerator.html', { root: './static' });
 });
 
 
