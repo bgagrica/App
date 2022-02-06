@@ -44,6 +44,10 @@ app.get('/register', (req, res) => {
 
     res.sendFile('index.html', { root: './dist' });
 });
+app.get('/admin', authToken, (req, res) => {
+
+    res.sendFile('indexAdmin.html', { root: './static' });
+});
 
 
 app.post('/',authToken, (req, res) => {
