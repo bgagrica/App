@@ -24,7 +24,7 @@ var corsOptions = {
     origin: '*',
     optionsSuccessStatus: 200
 }
-appCrud.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 function authToken(req, res, next) {
     const authHeader = req.headers['authorization'];
