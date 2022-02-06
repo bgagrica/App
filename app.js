@@ -75,7 +75,7 @@ const staticMdl = express.static(path.join(__dirname, 'dist'));
 
 app.use(staticMdl);
 
-app.use(history({ index: './dist/index.html' }));
+app.use(history({ index: '/index.html' }));
 
 app.use(staticMdl);
 
