@@ -8,7 +8,7 @@ const func = require('joi/lib/types/func');
 const history = require('connect-history-api-fallback');
 
 var corsOptions = {
-    origin: '*',
+    origin: 'http://branko-app.herokuapp.com',
     optionsSuccessStatus: 200
 }
 app.use(cors(corsOptions));
