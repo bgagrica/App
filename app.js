@@ -57,7 +57,7 @@ app.get('/moderator', (req, res) => {
 });
 
 
-app.use(express.static(path.join(__dirname, 'static')));
+//app.use(express.static(path.join(__dirname, 'static')));
 const staticMdl = express.static(path.join(__dirname, 'dist'));
 
 app.use(staticMdl);
