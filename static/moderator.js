@@ -73,7 +73,7 @@ function init(){
                     category: cat,
                 };
                 
-               let isValid = validateInput(name1,cat,blogBody)
+               let isValid = validateInput(name1,blogBody,cat)
                console.log(isValid)
                if(!isValid) return   
        
@@ -183,7 +183,7 @@ function validateCategory(cat){
 
 function validateBody(body){
     let len = body.length
-    if(len < 50 || len > 2048){
+    if(len < 10 || len > 2048){
         alert("body not valid")
         return false
     }
@@ -194,17 +194,12 @@ function validateBody(body){
 
 
 
-function validateInput(name,email,nickname,password,password2){
+function validateInput(name,body,cat){
     if(!validateName(name))
         return false
     if(!validateBody(body))
         return false
-    if(!validateEmail(email))
-        return false
-    if(!validateNickname(nickname))
-        return false
-    if(!validatePassword(password,password2))
-        return false
+   
     return true
 
 }
