@@ -6,22 +6,22 @@ function init() {
    
     //console.log(token)
 
-   fetch('https://branko-app.herokuapp.com//', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json',
-    'Authorization': `Bearer ${token}` }
-    })
-    .then( res => res.json() )
-    .then( el => {
-        if (el.msg) {
-            alert(el.msg);
+//    fetch('https://branko-app.herokuapp.com/', {
+//     method: 'POST',
+//     headers: { 'Content-Type': 'application/json',
+//     'Authorization': `Bearer ${token}` }
+//     })
+//     .then( res => res.json() )
+//     .then( el => {
+//         if (el.msg) {
+//             alert(el.msg);
             
-        } else {
+//         } else {
         
-            console.log(el.msg)
-            window.location.href = 'index.html';
-        }
-    });
+//             console.log(el.msg)
+//             window.location.href = 'index.html';
+//         }
+//     });
 
 
 
@@ -35,7 +35,7 @@ function init() {
         };
 
     
-        fetch('https://branko-auth.herokuapp.com/admin/login', {
+        fetch('https://branko-auth.herokuapp.com/admin/api_login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
