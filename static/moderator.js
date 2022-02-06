@@ -43,7 +43,7 @@ function init(){
                     category: cat,
                 };
              
-               let isValid = validateInput(name1,cat,blogBody)
+               let isValid = validateInput(name1,blogBody,cat)
                console.log(isValid)
                if(!isValid) return   
        
