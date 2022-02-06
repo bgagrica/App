@@ -6,14 +6,24 @@ const cors = require('cors');
 const http = require('http');
 const jwt = require('jsonwebtoken');
 const func = require('joi/lib/types/func');
+const { Server } = require("socket.io");
 const history = require('connect-history-api-fallback');
 require('dotenv').config();
 
+const io = new Server(server, {
+    cors: {
+        origin: 'https://gagrica-app.herokuapp.com',
+        
+        methods: ['GET', 'POST'],
+        credentials: true
+    },
+    allowEIO3: true
+});
 var corsOptions = {
     origin: '*',
     optionsSuccessStatus: 200
 }
-app.use(cors(corsOptions));
+appCrud.use(cors(corsOptions));
 
 function authToken(req, res, next) {
     const authHeader = req.headers['authorization'];
@@ -68,7 +78,10 @@ app.use(history({ index: './dist/index.html' }));
 
 app.use(staticMdl);
 
-app.listen({ port: process.env.PORT || 8000 }, async () => {
-    console.log('Pokrenut je aplikacioni servis')
+// app.listen({ port: process.env.PORT || 8000 }, async () => {
+//     console.log('Pokrenut je aplikacioni servis')
+//     await sequelize.authenticate();
+// });
+server.listen({ port: process.env.PORT || 9000 }, async () => {
     await sequelize.authenticate();
 });
