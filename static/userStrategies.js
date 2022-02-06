@@ -8,7 +8,7 @@ function init(){
     // headers: {
     //     'Authorization': `Bearer ${token}`
     // }
-    fetch('https://branko-rest.herokuapp.com/admin/userStrategies' ,{
+    fetch('https://gagrica-rest.herokuapp.com/admin/userStrategies' ,{
         headers: {
         'Authorization': `Bearer ${token}`
        }
@@ -42,7 +42,7 @@ function deleteUsrStr(row){
         id: number,
      }
     
-            let path = 'https://branko-rest.herokuapp.com/admin/userStrategies/' + number
+            let path = 'https://gagrica-rest.herokuapp.com/admin/userStrategies/' + number
         fetch(path, {
             method: 'DELETE',
             

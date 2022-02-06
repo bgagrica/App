@@ -35,7 +35,7 @@ function init() {
         };
 
     
-        fetch('https://branko-auth.herokuapp.com/admin/api_login', {
+        fetch('https://gagrica-auth.herokuapp.com/admin/api_login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

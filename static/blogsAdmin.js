@@ -8,7 +8,7 @@ function init(){
     //     'Authorization': `Bearer ${token}`
     // }
        
-    fetch('https://branko-rest.herokuapp.com/admin/allBlogs', {
+    fetch('https://gagrica-rest.herokuapp.com/admin/allBlogs', {
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -40,7 +40,7 @@ function init(){
 
         };
 
-        fetch('https://branko-rest.herokuapp.com/admin/blogs/'+selected, {
+        fetch('https://gagrica-rest.herokuapp.com/admin/blogs/'+selected, {
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}` },
@@ -67,7 +67,7 @@ function deleteBlog(row){
         id: number,
      }
     
-            let path = 'https://branko-rest.herokuapp.com/admin/blogs/' + number
+            let path = 'https://gagrica-rest.herokuapp.com/admin/blogs/' + number
         fetch(path, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' ,
@@ -91,7 +91,7 @@ function selectBlog(row){
 
 
 
-    fetch('https://branko-rest.herokuapp.com/blogs/'+number, {
+    fetch('https://gagrica-rest.herokuapp.com/blogs/'+number, {
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -110,7 +110,7 @@ function selectBlog(row){
        
     });
 
-    fetch('https://branko-rest.herokuapp.com/admin/comments/'+number, {
+    fetch('https://gagrica-rest.herokuapp.com/admin/comments/'+number, {
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -140,7 +140,7 @@ function deleteComment(row){
         id: number,
      }
     
-            let path = 'https://branko-rest.herokuapp.com/admin/comments/' + number
+            let path = 'https://gagrica-rest.herokuapp.com/admin/comments/' + number
         fetch(path, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' ,

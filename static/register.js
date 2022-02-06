@@ -40,7 +40,7 @@ function init() {
             if(!validateInput(name,email,nickname,password1,password2,role,canMakeBlogs))return
            
                 
-                fetch('https://branko-auth.herokuapp.com/admin/api_register', {
+                fetch('https://gagrica-auth.herokuapp.com/admin/api_register', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)

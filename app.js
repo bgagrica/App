@@ -6,6 +6,7 @@ const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const func = require('joi/lib/types/func');
 const history = require('connect-history-api-fallback');
+require('dotenv').config();
 
 var corsOptions = {
     origin: '*',

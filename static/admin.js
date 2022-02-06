@@ -3,7 +3,7 @@
 function init(){
 
     
-    fetch('http://localhost:9000/admin/moderators')
+    fetch('https://gagrica-rest.herokuapp.com/moderators')
         .then( res => res.json() )
         .then( data => {
             const lst = document.getElementById('modLst');
@@ -38,7 +38,7 @@ function deleteMod(row){
         id: number,
      }
     
-            let path = 'http://localhost:9000/admin/moderators/' + number
+            let path = 'https://gagrica-rest.herokuapp.com/admin/moderators/' + number
         fetch(path, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' },
@@ -66,7 +66,7 @@ function deleteBlog(row){
         id: number,
      }
     
-            let path = 'http://localhost:9000/admin/blogs/' + number
+            let path = 'https://gagrica-rest.herokuapp.com/admin/blogs/' + number
         fetch(path, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' },
