@@ -4,7 +4,7 @@ let token = cookies[cookies.length - 1];
 
 function init(){
 
-    fetch('http://localhost:9000/admin/user', {
+    fetch('https://branko-rest.herokuapp.com/admin/user', {
         headers: {
             'Authorization': `Bearer ${token}`
         }

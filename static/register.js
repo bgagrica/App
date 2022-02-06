@@ -40,7 +40,7 @@ function init() {
             if(!validateInput(name,email,nickname,password1,password2,role,canMakeBlogs))return
            
                 
-                fetch('http://localhost:3000/admin/register', {
+                fetch('https://branko-auth.herokuapp.com/admin/register', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)

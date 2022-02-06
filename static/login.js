@@ -6,7 +6,7 @@ function init() {
    
     //console.log(token)
 
-   fetch('http://localhost:8000/', {
+   fetch('https://branko-app.herokuapp.com//', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json',
     'Authorization': `Bearer ${token}` }
@@ -35,7 +35,7 @@ function init() {
         };
 
     
-        fetch('http://localhost:3000/admin/login', {
+        fetch('https://branko-auth.herokuapp.com/admin/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

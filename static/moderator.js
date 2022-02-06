@@ -7,7 +7,7 @@ function init(){
     cookies = document.cookie.split('=');
     token = cookies[cookies.length - 1];
     console.log(token)
-    fetch('http://localhost:9000/admin/blogs', {
+    fetch('https://branko-rest.herokuapp.com/admin/blogs', {
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -47,7 +47,7 @@ function init(){
                console.log(isValid)
                if(!isValid) return   
        
-                    fetch('http://localhost:9000/admin/blogs', {
+                    fetch('https://branko-rest.herokuapp.com/admin/blogs', {
                         method: 'POST',
                         headers: { 
                         'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ function init(){
                console.log(isValid)
                if(!isValid) return   
        
-                    fetch('http://localhost:9000/admin/blogs/'+ selected, {
+                    fetch('https://branko-rest.herokuapp.com/admin/blogs/'+ selected, {
                         method: 'PUT',
                         headers: { 
                         'Content-Type': 'application/json',
@@ -109,7 +109,7 @@ function deleteBlog(row){
         id: number,
      }
      
-        let path = 'http://localhost:9000/admin/blogs/' + number
+        let path = 'https://branko-rest.herokuapp.com/admin/blogs/' + number
         fetch(path, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ function selectBlog(row){
 
 
 
-    fetch('http://localhost:9000/admin/blogs/'+number,{
+    fetch('https://branko-rest.herokuapp.com/admin/blogs/'+number,{
         headers: {
         'Authorization': `Bearer ${token}`
        }

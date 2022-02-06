@@ -5,7 +5,7 @@ function init(){
     cookies = document.cookie.split('=');
     token = cookies[cookies.length - 1];
 
-    fetch('http://localhost:9000/admin/users' ,{
+    fetch('https://branko-rest.herokuapp.com/admin/users' ,{
         headers: {
         'Authorization': `Bearer ${token}`
        }
@@ -41,7 +41,7 @@ function init(){
             role:role
         };
         console.log(token)
-        fetch('http://localhost:9000/admin/users/'+selected, {
+        fetch('https://branko-rest.herokuapp.com/admin/users/'+selected, {
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}` },
@@ -68,7 +68,7 @@ function deleteUsr(row){
         id: number,
      }
     
-            let path = 'http://localhost:9000/admin/users/' + number
+            let path = 'https://branko-rest.herokuapp.com/admin/users/' + number
         fetch(path, {
             method: 'DELETE',
             
@@ -95,7 +95,7 @@ function selectUsr(row){
 
 
 
-    fetch('http://localhost:9000/admin/users/'+number,{
+    fetch('https://branko-rest.herokuapp.com/admin/users/'+number,{
         headers: {
         'Authorization': `Bearer ${token}`
        }
