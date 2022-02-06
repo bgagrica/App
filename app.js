@@ -10,6 +10,7 @@ const { Server } = require("socket.io");
 const history = require('connect-history-api-fallback');
 require('dotenv').config();
 
+const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
         origin: 'https://gagrica-app.herokuapp.com',
