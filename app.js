@@ -3,6 +3,7 @@ const { sequelize } = require('./models');
 const path = require('path');
 const app = express()
 const cors = require('cors');
+const http = require('http');
 const jwt = require('jsonwebtoken');
 const func = require('joi/lib/types/func');
 const history = require('connect-history-api-fallback');
